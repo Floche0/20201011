@@ -763,11 +763,11 @@ function app_install(appname){
 				
 
 		// 달력
-		dataPicker('2020-04-11');
+		dataPicker('');
 
 		
 		// 다음 지도
-		daumMap(37.46581668520623, 126.95949844543955);
+		daumMap(37.46581668520623, 12.95949844543955);
 		
 		// 팝업갤러리
 		popGallery();
@@ -776,6 +776,52 @@ function app_install(appname){
 		});
 		
 	</script>
+	
+
+<script>
+function ask_admin_login(s_url) {
+		if (confirm('로그인이 필요한 서비스입니다.\n\n로그인 페이지로 이동할까요?')) {
+				location.href='user_login.php?ecard=10112020&s_url='+s_url
+		}
+}
+
+$(function() {
+
+	// 하단 흰 여백을 남는 해상도 만큼 채우기
+	
+})
+
+$(function() {
+	$('input[type=checkbox],input[type=image]').each(function() {
+        $(this).css('border', 0)
+	})
+})
+
+function not_for_pc() {
+				alert('모바일 환경에서 사용가능한 기능입니다');
+			return false
+	}
+
+function windowcopen(url, title, options) {
+
+	var option_nosize = "";
+	options_arr = options.split(",")
+	for(i=0; (i+1) <= options_arr.length; i++){
+		option = options_arr[i]
+		option_arr = option.split("=")
+		var fld = option_arr[0]
+		var val = option_arr[1]
+		if(fld == 'width') var ww = val
+		else if(fld == 'height') var wh = val
+		else option_nosize += ","+fld+"="+val
+	}
+
+	var left = (screen.width/2)-(ww/2)
+	var top = (screen.height/2)-(wh/2)-50
+	return window.open(url, title, 'width='+ww+', height='+wh+', top='+top+', left='+left +option_nosize)
+
+}
+</script>
 	
 	
 	<script src="Files/player.vimeo.com/api/player.js"></script>
