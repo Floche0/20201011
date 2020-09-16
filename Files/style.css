@@ -1,0 +1,35 @@
+@charset "euc-kr";
+
+/* IE font Set */
+@import url("notosanskr.css");  /* font-family:'Noto Sans KR'; */
+@import url("nanummyeongjo.css");  /* font-family:'Nanum Myeongjo'; */
+@import url("campton.css");  /* font-family:'campton'; */
+
+@import url("reset.css");
+@import url("common.css?v=0.0.3");
+@import url("layout.css?v=0.0.9");
+
+
+
+#map_navi_row {
+    padding-bottom: 20px;
+}
+.insbox { line-height: 0; font-size: 0; padding-top: 20px; padding-bottom: 10px; }
+.inss { line-height: 0; font-size: 0; display: none; text-align: center; }
+
+
+
+#map_memo {
+    box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+    border: 1px solid #ececec;
+    color: #333333;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+#map_not_registrated_txt {
+    font-size:14px!important;font-weight:bold;margin-left:15px;color:#fff;
+}
